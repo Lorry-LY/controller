@@ -4,7 +4,7 @@
       <HeadTop/>
     </el-row>
     <el-row style="height: 95%;">
-      <el-col :span="3" style="min-height: 100%;">
+      <el-col :span="3" style="min-height: 100%;border-right: 1px solid; ">
         <SideBar/>
       </el-col>
       <el-col :span="21" style="height: 100%;overflow: auto;">

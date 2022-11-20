@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <div class="sys_name">区块链技术产品管理系统</div>
     <LoginForm class="loginForm"/>
   </div>
 </template>
@@ -29,5 +30,15 @@ export default {
   top: 20%;
   width: 20%;
   min-width: 10%;
+}
+
+.sys_name {
+  position: absolute;
+  left: 15%;
+  top: 40%;
+  color:rgb(0, 0, 0);
+  font-size:40px;
+  font-weight: bold;
+  font-family:"微软雅黑";
 }
 </style>

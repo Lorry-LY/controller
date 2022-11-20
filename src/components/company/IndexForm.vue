@@ -1,5 +1,70 @@
 <template>
   <div class="content">
+    <el-row :gutter="50" style="margin:20px 20px;">
+      <el-col :span="12">
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <span>公司信息</span>
+            <el-button style="float: right; padding: 3px 0" type="text">
+              <i class="el-icon-refresh-right"></i>
+            </el-button>
+          </div>
+          <el-descriptions class="margin-top" :column="3" border>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-user"></i>
+                用户名
+              </template>
+              kooriookami
+            </el-descriptions-item>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-mobile-phone"></i>
+                手机号
+              </template>
+              18100000000
+            </el-descriptions-item>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-location-outline"></i>
+                居住地
+              </template>
+              苏州市
+            </el-descriptions-item>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-tickets"></i>
+                备注
+              </template>
+              <el-tag size="small">学校</el-tag>
+            </el-descriptions-item>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-office-building"></i>
+                联系地址
+              </template>
+              江苏省苏州市吴中区吴中大道 1188 号
+            </el-descriptions-item>
+          </el-descriptions>
+        </el-card>
+      </el-col>
+      <el-col :span="12">
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <el-badge :value="4" class="item">
+              <span>待办事项</span>
+            </el-badge>
+            <el-button style="float: right; padding: 3px 0" type="text">
+              <i class="el-icon-refresh-right"></i>
+            </el-button>
+          </div>
+          <div class="text item"><el-link>新来一批安慕希酸奶</el-link></div>
+          <div class="text item"><el-link>新的合作请求待处理</el-link></div>
+          <div class="text item"><el-link>审查通知</el-link></div>
+          <div class="text item"><el-link>完善用户信息</el-link></div>
+        </el-card>
+      </el-col>
+    </el-row>
     <el-divider></el-divider>
     <el-row :gutter="50" style="margin:20px 200px;">
       <el-col :span="8">
@@ -21,14 +86,14 @@
     <div style="margin-top: 50px;">
       <span>公司各部门统计图</span>
     </div>
-    <el-divider></el-divider>
+    <!-- <el-divider></el-divider>
     <el-row :gutter="50" style="margin:0 200px;margin-top: 50px;">
       <el-col :span="20">
         <div class="line-content" ref="chart4">
 
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
   </div>
 </template>
 
@@ -63,7 +128,7 @@ export default {
     this.drawChart1()
     this.drawChart2()
     this.drawChart3()
-    this.drawChart4()
+    // this.drawChart4()
   },
   methods: {
     drawChart1() {
@@ -200,74 +265,74 @@ export default {
       // 使用刚指定的配置项和数据显示图表。
       myChart.setOption(option);
     },
-    drawChart4() {
-      // 基于准备好的dom，初始化echarts实例  这个和上面的main对应
-      let myChart = this.$echarts.init(this.$refs['chart4']);
-      // 指定图表的配置项和数据
-      let option = {
-        title: {
-          text: '产品处理量'
-        },
-        tooltip: {
-          trigger: 'axis'
-        },
-        legend: {
-          data: ['奥利奥', '巧乐兹', '伊利牛奶', '安慕希', '农夫山泉']
-        },
-        grid: {
-          // left: '3%',
-          // right: '4%',
-          // bottom: '3%',
-          containLabel: true
-        },
-        // toolbox: {
-        //   feature: {
-        //     saveAsImage: {}
-        //   }
-        // },
-        xAxis: {
-          type: 'category',
-          boundaryGap: false,
-          data: ['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-06']
-        },
-        yAxis: {
-          type: 'value'
-        },
-        series: [
-          {
-            name: '奥利奥',
-            type: 'line',
-            stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210]
-          },
-          {
-            name: '巧乐兹',
-            type: 'line',
-            stack: 'Total',
-            data: [220, 182, 191, 234, 290, 330, 310]
-          },
-          {
-            name: '伊利牛奶',
-            type: 'line',
-            stack: 'Total',
-            data: [150, 232, 201, 154, 190, 330, 410]
-          },
-          {
-            name: '安慕希',
-            type: 'line',
-            stack: 'Total',
-            data: [320, 332, 301, 334, 390, 330, 320]
-          },
-          {
-            name: '农夫山泉',
-            type: 'line',
-            stack: 'Total',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
-          }
-        ]
-      }
-      myChart.setOption(option);
-    }
+    // drawChart4() {
+    //   // 基于准备好的dom，初始化echarts实例  这个和上面的main对应
+    //   let myChart = this.$echarts.init(this.$refs['chart4']);
+    //   // 指定图表的配置项和数据
+    //   let option = {
+    //     title: {
+    //       text: '产品处理量'
+    //     },
+    //     tooltip: {
+    //       trigger: 'axis'
+    //     },
+    //     legend: {
+    //       data: ['奥利奥', '巧乐兹', '伊利牛奶', '安慕希', '农夫山泉']
+    //     },
+    //     grid: {
+    //       // left: '3%',
+    //       // right: '4%',
+    //       // bottom: '3%',
+    //       containLabel: true
+    //     },
+    //     // toolbox: {
+    //     //   feature: {
+    //     //     saveAsImage: {}
+    //     //   }
+    //     // },
+    //     xAxis: {
+    //       type: 'category',
+    //       boundaryGap: false,
+    //       data: ['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-06']
+    //     },
+    //     yAxis: {
+    //       type: 'value'
+    //     },
+    //     series: [
+    //       {
+    //         name: '奥利奥',
+    //         type: 'line',
+    //         stack: 'Total',
+    //         data: [120, 132, 101, 134, 90, 230, 210]
+    //       },
+    //       {
+    //         name: '巧乐兹',
+    //         type: 'line',
+    //         stack: 'Total',
+    //         data: [220, 182, 191, 234, 290, 330, 310]
+    //       },
+    //       {
+    //         name: '伊利牛奶',
+    //         type: 'line',
+    //         stack: 'Total',
+    //         data: [150, 232, 201, 154, 190, 330, 410]
+    //       },
+    //       {
+    //         name: '安慕希',
+    //         type: 'line',
+    //         stack: 'Total',
+    //         data: [320, 332, 301, 334, 390, 330, 320]
+    //       },
+    //       {
+    //         name: '农夫山泉',
+    //         type: 'line',
+    //         stack: 'Total',
+    //         data: [820, 932, 901, 934, 1290, 1330, 1320]
+    //       }
+    //     ]
+    //   }
+    //   myChart.setOption(option);
+    // }
   },
   computed: {
 
@@ -292,9 +357,32 @@ export default {
   margin: auto;
 }
 
-.line-content{
+.line-content {
   width: 800px;
   height: 500px;
   margin: auto;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.item {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  text-align: left;
 }
 </style>
