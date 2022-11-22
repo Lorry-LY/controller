@@ -228,8 +228,8 @@ export default {
         if (valid) {
           this.tempData.job_percent = (this.tempData.job_per)+'%'
           const tempData = Object.assign({}, this.tempData)
-          const index = this.tableData.findIndex(v => v.name === this.tempData.name)
-          this.tableData.splice(index, 1, this.tempData)
+          const index = this.tableData.findIndex(v => v.name === tempData.name)
+          this.tableData.splice(index, 1, tempData)
           this.dialogFormVisible = false
           this.$message({
             type: 'success',
