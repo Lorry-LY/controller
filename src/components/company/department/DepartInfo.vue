@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     changeOption(value){
-      console.log(value)
+      // console.log(value)
     }
   }
 }

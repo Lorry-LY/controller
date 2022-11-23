@@ -1,8 +1,11 @@
 <template>
   <div class="header_container">
     <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/manage' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item v-for="(item, index) in $route.meta" :key="index">{{ item }}</el-breadcrumb-item>
+      <transition-group name="breadcrumb">
+      <el-breadcrumb-item v-for="(item) in levelList" :key="item.path">
+        <router-link :underline="false" :to="item.path">{{ item.meta }}</router-link>
+      </el-breadcrumb-item>
+    </transition-group>
     </el-breadcrumb>
   </div>
 </template>
@@ -12,19 +15,19 @@
 export default {
   data() {
     return {
-
+      // levelList: null
     }
-  },
-  created() {
-
   },
   computed: {
-    handleCommand() {
-
+    levelList(){
+      let temp = this.$route.matched
+      // console.log(temp)
+      let res = []
+      temp.forEach(t => {
+        if (t.name!='index')res.push(t)
+      })
+      return res;
     }
-  },
-  methods: {
-
   }
 }
 </script>

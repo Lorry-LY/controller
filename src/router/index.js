@@ -10,6 +10,7 @@ import DepartForm from "../components/company/department/DepartForm.vue"
 import DepartInfo from "../components/company/department/DepartInfo.vue"
 
 import ProductForm from "../components/company/product/ProductForm.vue"
+import LinkForm from "../components/company/link/LinkForm.vue"
 
 Vue.use(VueRouter);
 
@@ -24,58 +25,58 @@ const routes = [
     component: LoginView,
   },
   {
-    path: "/manage",
+    path: "/index",
     component: ManageView,
+    meta: '首页',
+    redirect: '/manage',
     children: [
       {
         path: "/manage",
         name: "index",
         component: IndexForm,
+        meta: '首页'
       },
       {
         path: "/depart_manage",
         name: "depart_manage",
         component: DepartForm,
+        meta: '部门管理'
       },
       {
         path: "/depart_info",
         name: "depart_info",
         component: DepartInfo,
-      },
-      {
-        path: "/product_add",
-        name: "product_add",
-        component: EmptyView,
+        meta: '部门信息'
       },
       {
         path: "/product_info",
         name: "product_info",
         component: ProductForm,
-      },
-      {
-        path: "/link_depart",
-        name: "link_depart",
-        component: EmptyView,
+        meta: '产品信息'
       },
       {
         path: "/link_product",
         name: "link_product",
-        component: EmptyView,
+        component: LinkForm,
+        meta: '信息链'
       },
       {
         path: "/send_info",
         name: "send_info",
         component: EmptyView,
+        meta: '通知'
       },
       {
         path: "/admin_set",
         name: "admin_set",
         component: EmptyView,
+        meta: '管理员设置'
       },
       {
         path: "/direction",
         name: "direction",
         component: EmptyView,
+        meta: '说明'
       }
     ],
   },

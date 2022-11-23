@@ -9,29 +9,30 @@
       <el-col :span="2">
         <el-button type="primary">搜索</el-button>
       </el-col>
-      <el-col :span="16"></el-col>
+      <el-col :span="15"></el-col>
       <el-col :span="2">
         <el-button type="primary" :disabled="isEnableRemove" @click="deleteMulData">删除</el-button>
       </el-col>
       <el-col :span="2">
-        <el-button type="primary" @click="handleCreate">添加部门</el-button>
+        <el-button type="primary" @click="handleCreate" style="margin-right:50px;">添加部门</el-button>
       </el-col>
+      <el-col :span="1"></el-col>
     </el-row>
     <el-table :data="tableData" border style="width: 100%" @selection-change="handleSelectionChange"
       tooltip-effect="dark" ref="multipleTable">
       <el-table-column type="selection" width="55">
       </el-table-column>
-      <el-table-column fixed prop="name" label="部门名称" width="100" sortable>
+      <el-table-column fixed prop="name" label="部门名称" width="150" sortable>
       </el-table-column>
-      <el-table-column prop="username" label="用户名" width="100" sortable>
+      <el-table-column prop="username" label="用户名" sortable>
       </el-table-column>
-      <el-table-column prop="password" label="密码" width="150" sortable>
+      <el-table-column prop="password" label="密码" sortable>
       </el-table-column>
-      <el-table-column prop="job_number" label="剩余工作量" width="120" sortable>
+      <el-table-column prop="job_number" label="剩余工作量" width="160" sortable>
       </el-table-column>
-      <el-table-column prop="job_percent" label="工作完成情况" width="300" sortable>
+      <el-table-column prop="job_percent" label="工作完成情况" width="160" sortable>
       </el-table-column>
-      <el-table-column fixed="right" label="操作">
+      <el-table-column fixed="right" label="操作" width="300">
         <template slot-scope="{row,$index}">
           <el-button @click="handleUpdate(row)" type="primary" size="small">编辑</el-button>
           <el-button @click="deleteData(row,$index)" type="danger" size="small">删除</el-button>
@@ -284,8 +285,7 @@ export default {
 
 .content {
   position: relative;
-  width: 70%;
-  margin: auto;
+  margin: 50px 50px;
 }
 
 .flex-grow {

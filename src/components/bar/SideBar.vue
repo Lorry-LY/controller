@@ -8,11 +8,10 @@
     style="min-height: 100%;"
     @open="handleOpen" @close="handleClose" :collapse="isCollapse"
     @select="changeSelect"
-    @mouseenter="enter" @mouseleave="leave"
     router
     >
       <el-menu-item index="manage"><i class="el-icon-menu"></i>首页</el-menu-item>
-      <el-submenu index="1">
+      <el-submenu index="1" disabled>
         <template slot="title"><i class="el-icon-s-claim"></i>项目管理</template>
         <el-menu-item index="depart_info">项目分发</el-menu-item>
         <el-menu-item index="depart_info">项目审核</el-menu-item>
@@ -26,12 +25,10 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title"><i class="el-icon-plus"></i>产品管理</template>
-        <el-menu-item index="product_add">添加产品</el-menu-item>
         <el-menu-item index="product_info">产品信息</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
         <template slot="title"><i class="el-icon-star-on"></i>信息链</template>
-        <el-menu-item index="link_depart">部门</el-menu-item>
         <el-menu-item index="link_product">产品</el-menu-item>
         <!-- <el-menu-item index="newMember">用户数据</el-menu-item> -->
       </el-submenu>
@@ -68,21 +65,13 @@ export default {
 	},
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
     changeSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    enter() {
-      console.log('enter')
-      isCollapse = false
-    },
-    leave() {
-      console.log('leave')
-      isCollapse = true
+      // console.log(key, keyPath);
     }
   }
 }

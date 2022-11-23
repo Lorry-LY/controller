@@ -4,6 +4,9 @@
       <el-col :span="3">
         <el-input v-model="searchName" placeholder="产品名称"></el-input>
       </el-col>
+      <el-col :span="3">
+        <el-input v-model="searchCode" placeholder="产品序列号"></el-input>
+      </el-col>
       <el-col :span="2">
         <el-select v-model="departmentOption" clearable placeholder="部门">
           <el-option v-for="item in departmentList" :key="item.value" :label="item.label" :value="item.value">
@@ -163,6 +166,7 @@ export default {
   data() {
     return {
       searchName: '',
+      searchCode: '',
       departmentOption: '',
       departmentList: [{
         value: '1',
