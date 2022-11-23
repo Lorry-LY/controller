@@ -78,12 +78,12 @@ export default {
       this.department.password = ''
     },
     login () {
-      this.$router.push('manage');
+      this.$router.push('department');
     },
     submit() {
       this.$refs[activeName].validate((valid) => {
         if (valid) {
-          this.$router.push('manage');
+          this.$router.push('department');
         } else {
           return false;
         }

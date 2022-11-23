@@ -24,7 +24,7 @@ export default {
       // console.log(temp)
       let res = []
       temp.forEach(t => {
-        if (t.name!='index')res.push(t)
+        if (t.path!='/manage'&&t.path!='/department')res.push(t)
       })
       return res;
     }

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import SideBar from '@/components/bar/SideBar.vue'
+import SideBar from '@/components/bar/SideBarCom.vue'
 import BreadCrumb from '@/components/bar/BreadCrumb.vue'
 import HeadTop from '@/components/bar/HeadTop.vue'
 export default {
