@@ -25,6 +25,7 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title"><i class="el-icon-plus"></i>产品管理</template>
+        <el-menu-item index="/department/product_add">添加产品</el-menu-item>
         <el-menu-item index="/department/product_info">产品信息</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
@@ -35,6 +36,7 @@
       <el-submenu index="5">
         <template slot="title"><i class="el-icon-edit"></i>编辑</template>
         <!-- <el-menu-item index="uploadImg">上传图片</el-menu-item> -->
+        <el-menu-item index="/department/send_info">上报通知</el-menu-item>
         <el-menu-item index="/department/send_info">下放通知</el-menu-item>
       </el-submenu>
       <el-submenu index="6">

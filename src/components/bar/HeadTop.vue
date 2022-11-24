@@ -14,7 +14,7 @@
           <i class="el-icon-location"></i>
           <span style="color:aliceblue;font-size:15px;font-family:微软雅黑">用户名</span>
         </template>
-        <el-menu-item index="login" @click="cli()">切换账号</el-menu-item>
+        <el-menu-item index="/login" @click="cli()">切换账号</el-menu-item>
         <el-menu-item index="direction">联系我们</el-menu-item>
       </el-submenu>
     </el-menu>

@@ -15,6 +15,7 @@ import IndexFormD from "../components/department/IndexForm.vue";
 import DepartFormD from "../components/department/department/DepartForm.vue"
 import DepartInfoD from "../components/department/department/DepartInfo.vue"
 import ProductFormD from "../components/department/product/ProductForm.vue"
+import ProductAddD from "../components/department/product/ProdectAdd.vue"
 import LinkFormD from "../components/department/link/LinkForm.vue"
 
 Vue.use(VueRouter);
@@ -102,6 +103,11 @@ const routes = [
         path: "/department/product_info",
         component: ProductFormD,
         meta: '产品信息'
+      },
+      {
+        path: "/department/product_add",
+        component: ProductAddD,
+        meta: '添加产品'
       },
       {
         path: "/department/link_product",
