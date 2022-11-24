@@ -9,7 +9,14 @@
               <i class="el-icon-refresh-right"></i>
             </el-button>
           </div>
-          <el-descriptions class="margin-top" :column="3" border>
+          <el-descriptions class="margin-top" :column="2" border>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-tickets"></i>
+                部门名称
+              </template>
+              行政部门
+            </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
                 <i class="el-icon-user"></i>
@@ -36,7 +43,7 @@
                 <i class="el-icon-tickets"></i>
                 备注
               </template>
-              <el-tag size="small">学校</el-tag>
+              <el-tag size="small">部门</el-tag>
             </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
@@ -67,20 +74,15 @@
     </el-row>
     <el-divider></el-divider>
     <el-row :gutter="50" style="margin:20px 200px;">
-      <el-col :span="8">
+      <el-col :span="12">
         <PieChart1 class="grid-content" ref="chart1">
 
         </PieChart1>
       </el-col>
-      <el-col :span="8">
+      <el-col :span="12">
         <PieChart2 class="grid-content" ref="chart2">
 
         </PieChart2>
-      </el-col>
-      <el-col :span="8">
-        <BarChart1 class="grid-content" ref="chart3">
-          
-        </BarChart1>
       </el-col>
     </el-row>
     <div style="margin-top: 50px;">

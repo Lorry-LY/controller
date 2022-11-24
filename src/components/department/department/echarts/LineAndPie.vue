@@ -33,11 +33,6 @@ export default {
       this.chart = this.$echarts.init(this.$refs['chart'])
 
       this.chart.setOption({
-        title: {
-          top: '10%',
-          text: '产品时间流水线',
-          left: '0%'
-        },
         legend: {
           show: true,
           // bottom: '-1%',

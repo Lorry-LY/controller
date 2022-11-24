@@ -5,13 +5,17 @@ import CompanyView from "../views/CompanyView.vue";
 import DepartmentView from "../views/DepartmentView.vue";
 import EmptyView from '../views/EmptyView.vue'
 
-import IndexForm from "../components/company/IndexForm.vue";
+import IndexFormC from "../components/company/IndexForm.vue";
+import DepartFormC from "../components/company/department/DepartForm.vue"
+import DepartInfoC from "../components/company/department/DepartInfo.vue"
+import ProductFormC from "../components/company/product/ProductForm.vue"
+import LinkFormC from "../components/company/link/LinkForm.vue"
 
-import DepartForm from "../components/company/department/DepartForm.vue"
-import DepartInfo from "../components/company/department/DepartInfo.vue"
-
-import ProductForm from "../components/company/product/ProductForm.vue"
-import LinkForm from "../components/company/link/BookManage.vue"
+import IndexFormD from "../components/department/IndexForm.vue";
+import DepartFormD from "../components/department/department/DepartForm.vue"
+import DepartInfoD from "../components/department/department/DepartInfo.vue"
+import ProductFormD from "../components/department/product/ProductForm.vue"
+import LinkFormD from "../components/department/link/LinkForm.vue"
 
 Vue.use(VueRouter);
 
@@ -33,27 +37,27 @@ const routes = [
     children: [
       {
         path: "/manage",
-        component: IndexForm,
+        component: IndexFormC,
         meta: '首页'
       },
       {
         path: "/manage/depart_manage",
-        component: DepartForm,
+        component: DepartFormC,
         meta: '部门管理'
       },
       {
         path: "/manage/depart_info",
-        component: DepartInfo,
+        component: DepartInfoC,
         meta: '部门信息'
       },
       {
         path: "/manage/product_info",
-        component: ProductForm,
+        component: ProductFormC,
         meta: '产品信息'
       },
       {
         path: "/manage/link_product",
-        component: LinkForm,
+        component: LinkFormC,
         meta: '信息链'
       },
       {
@@ -81,27 +85,27 @@ const routes = [
     children: [
       {
         path: "/department",
-        component: IndexForm,
+        component: IndexFormD,
         meta: '首页'
       },
       {
         path: "/department/depart_manage",
-        component: DepartForm,
+        component: DepartFormD,
         meta: '部门管理'
       },
       {
         path: "/department/depart_info",
-        component: DepartInfo,
+        component: DepartInfoD,
         meta: '部门信息'
       },
       {
         path: "/department/product_info",
-        component: ProductForm,
+        component: ProductFormD,
         meta: '产品信息'
       },
       {
         path: "/department/link_product",
-        component: LinkForm,
+        component: LinkFormD,
         meta: '信息链'
       },
       {

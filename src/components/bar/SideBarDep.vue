@@ -20,7 +20,7 @@
       </el-submenu>
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-document"></i>部门管理</template>
-        <el-menu-item index="/department/depart_manage">部门列表</el-menu-item>
+        <el-menu-item index="/department/depart_manage">员工列表</el-menu-item>
         <el-menu-item index="/department/depart_info">部门信息</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
