@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <el-row style="height: 60px;">
-      <HeadTop/>
+      <HeadTop content="部门端" username="运输部门"/>
     </el-row>
     <el-row style="height: 95%;">
       <el-col :span="3" style="min-height: 100%;border-right: 1px solid; ">

@@ -15,14 +15,14 @@
                 <i class="el-icon-tickets"></i>
                 部门名称
               </template>
-              行政部门
+              运输部门
             </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
                 <i class="el-icon-user"></i>
                 用户名
               </template>
-              kooriookami
+              transport
             </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
@@ -58,7 +58,7 @@
       <el-col :span="12">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <el-badge :value="4" class="item">
+            <el-badge :value="2" class="item">
               <span>待办事项</span>
             </el-badge>
             <el-button style="float: right; padding: 3px 0" type="text">
@@ -66,8 +66,8 @@
             </el-button>
           </div>
           <div class="text item"><el-link>新来一批安慕希酸奶</el-link></div>
-          <div class="text item"><el-link>新的合作请求待处理</el-link></div>
-          <div class="text item"><el-link>审查通知</el-link></div>
+          <!-- <div class="text item"><el-link>新的合作请求待处理</el-link></div> -->
+          <!-- <div class="text item"><el-link>审查通知</el-link></div> -->
           <div class="text item"><el-link>完善用户信息</el-link></div>
         </el-card>
       </el-col>
@@ -86,7 +86,7 @@
       </el-col>
     </el-row>
     <div style="margin-top: 50px;">
-      <span>公司各部门统计图</span>
+      <span>部门情况统计图</span>
     </div>
     <!-- <el-divider></el-divider>
     <el-row :gutter="50" style="margin:0 200px;margin-top: 50px;">

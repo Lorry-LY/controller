@@ -9,13 +9,20 @@
               <i class="el-icon-refresh-right"></i>
             </el-button>
           </div>
-          <el-descriptions class="margin-top" :column="3" border>
+          <el-descriptions class="margin-top" :column="2" border>
+            <el-descriptions-item>
+              <template slot="label">
+                <i class="el-icon-eleme"></i>
+                公司名称
+              </template>
+              四川大学
+            </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
                 <i class="el-icon-user"></i>
                 用户名
               </template>
-              kooriookami
+              lorry
             </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
@@ -29,7 +36,7 @@
                 <i class="el-icon-location-outline"></i>
                 居住地
               </template>
-              苏州市
+              成都市
             </el-descriptions-item>
             <el-descriptions-item>
               <template slot="label">
@@ -43,7 +50,7 @@
                 <i class="el-icon-office-building"></i>
                 联系地址
               </template>
-              江苏省苏州市吴中区吴中大道 1188 号
+              四川省成都市双流区西航港街道
             </el-descriptions-item>
           </el-descriptions>
         </el-card>

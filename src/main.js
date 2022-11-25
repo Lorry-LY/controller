@@ -11,9 +11,9 @@ import axios from 'axios'
 Vue.prototype.$echarts = echarts
 Vue.prototype.$axios = axios
 
-Vue.config.productionTip = false
-
 Vue.use(ElementUI);
+
+Vue.config.productionTip = false
 
 new Vue({
   router,

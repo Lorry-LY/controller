@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div style="float:left;margin: 50px 50px;z-index: 2;">
+    <div style="float:left;margin: 2px 50px;z-index: 2;">
       <span style="font-weight: bold;">选择部门</span>
       <el-select v-model="value" placeholder="请选择部门" @change="changeOption">
         <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
@@ -40,7 +40,7 @@ export default {
         value: '选项5',
         label: '董事会'
       }],
-      value: '选项1'
+      value: '选项2'
     }
   },
   mounted(){

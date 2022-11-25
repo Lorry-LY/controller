@@ -2,8 +2,7 @@
   <div class="login_content">
     <el-tabs v-model="activeName" @tab-click="tabClick">
       <el-tab-pane label="公司登录" name="company">
-        <el-form :label-position="labelPosition" label-width="100px" :model="company"
-        :rules="rules" ref="company">
+        <el-form :label-position="labelPosition" label-width="100px" :model="company" :rules="rules" ref="company">
           <el-form-item label="公司名称" prop="name">
             <el-input v-model="company.name" placeholder="请输入公司名称"></el-input>
           </el-form-item>
@@ -16,8 +15,8 @@
         </el-form>
       </el-tab-pane>
       <el-tab-pane label="部门登录" name="department">
-        <el-form :label-position="labelPosition" label-width="100px" :model="department"
-        :rules="rules" ref="department">
+        <el-form :label-position="labelPosition" label-width="100px" :model="department" :rules="rules"
+          ref="department">
           <el-form-item label="部门名称" prop="name">
             <el-input v-model="department.name" placeholder="请输入部门名称"></el-input>
           </el-form-item>
@@ -30,8 +29,9 @@
         </el-form>
       </el-tab-pane>
       <el-checkbox v-model="text_checked" class="text_checked">同意协议</el-checkbox> <br>
-      <el-button class="vetify_btn">点击验证</el-button><br/>
-      <el-button class="login_btn" type="primary" style="min-width:100px;" @click="login">登录</el-button>
+      <el-button class="vetify_btn">点击验证</el-button><br />
+      <el-button class="login_btn" type="primary" style="min-width:100px;" @click="login"
+      :disabled="!text_checked">登录</el-button>
       <br>
     </el-tabs>
   </div>
@@ -40,7 +40,7 @@
 <script>
 
 export default {
-  data () {
+  data() {
     return {
       text_checked: false,
       activeName: 'company',
@@ -69,7 +69,7 @@ export default {
     }
   },
   methods: {
-    tabClick () {
+    tabClick() {
       this.company.name = ''
       this.company.username = ''
       this.company.password = ''
@@ -77,11 +77,19 @@ export default {
       this.department.username = ''
       this.department.password = ''
     },
-    login () {
-      this.$router.push('department');
+    login() {
+      this.$refs[this.activeName].validate((valid) => {
+        if (valid) {
+          if(this.activeName==="company")
+            this.$router.push("manage")
+          else this.$router.push(this.activeName)
+        } else {
+          return false
+        }
+      })
     },
     submit() {
-      this.$refs[activeName].validate((valid) => {
+      this.$refs[this.activeName].validate((valid) => {
         if (valid) {
           this.$router.push('department');
         } else {
@@ -99,9 +107,11 @@ export default {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
+
 .el-form-item {
   margin: 20px auto;
 }
+
 .text_checked {
   margin: 20px auto;
 }
@@ -114,6 +124,7 @@ export default {
 .phone_vetify_btn {
   margin: 20px auto;
 }
+
 .login_btn {
   margin-left: 37.5%;
 }
@@ -121,5 +132,4 @@ export default {
 .el-tabs {
   position: relative;
 }
-
 </style>

@@ -87,6 +87,13 @@ export default {
   data() {
     return {
       tableData: [{
+        name: '小熊维尼',
+        username: 'xiaoxiong',
+        password: '123456',
+        job_number: 20,
+        job_percent: '98.13%',
+        job_per: 98.36
+      },{
         name: '张三',
         username: 'administration',
         password: 'admin123456',

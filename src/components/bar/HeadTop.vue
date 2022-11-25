@@ -1,7 +1,7 @@
 <template>
   <div class="header_container">
     <el-button type="text" style="margin-left:5%;">
-      <span style="color:aliceblue;font-size:25px;font-family:微软雅黑">区块链技术产品管理系统</span>
+      <span style="color:aliceblue;font-size:25px;font-family:微软雅黑">区块链技术产品管理系统({{content}})</span>
     </el-button>
     <div class="flex-grow" />
     <el-date-picker class="block" v-model="currentDate" type="date" placeholder="选择日期" disabled
@@ -12,7 +12,7 @@
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span style="color:aliceblue;font-size:15px;font-family:微软雅黑">用户名</span>
+          <span style="color:aliceblue;font-size:15px;font-family:微软雅黑">{{username}}</span>
         </template>
         <el-menu-item index="/login" @click="cli()">切换账号</el-menu-item>
         <el-menu-item index="direction">联系我们</el-menu-item>
@@ -24,6 +24,7 @@
 <script>
 
 export default {
+  props:['content','username'],
   data() {
     return {
       currentDate: new Date()
